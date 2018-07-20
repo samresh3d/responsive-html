@@ -1,0 +1,81 @@
+header {
+    width: 100%;
+    height: 95px;
+    margin: 0 auto;
+    position: relative;
+    top: 0;
+    z-index: 9999;
+
+    .dk-blue {
+        background-color: $dark_blue;
+        width: 10px;
+        height: 10px;  
+        float: left;  
+    }
+    .lt-blue {
+        background-color: #87c4ee;
+        width: 100%;
+        height: 10px;
+        display: block;   
+    }
+    .citi-blue {
+        background-color: $citi-blue;
+        width: 110px;        
+        height: 80px;
+        
+        @include larger-than(tablet) {
+            height: 100px;
+            width: 142px;
+        }
+        
+        svg {
+            
+            &#logo {
+                width: 80px;
+                height: 46px;
+                margin: 15px 0 0 15px;
+                color: $white;
+
+                @include larger-than(tablet) {
+                    width: 80px;
+                    margin: 15px 0 0 14px;
+                }
+            }
+            
+            &#tagline {
+                display: none;
+
+                @include larger-than(tablet) {
+                    width: 110px;
+                    height: auto;
+                    display: block;
+                    margin: 5px 0 0 14px;
+                }
+
+            }
+        }
+        
+    }
+    .blue {
+        background-color: #008FC9;
+        width: 67px;
+        height: 45px;
+        @include larger-than(lgmobile) {
+            width: calc(65px + 10%);
+        }
+    }
+    .med-blue {
+        background-color: #6db0e0;
+        width: 122px;
+        height: 15px;
+        @include larger-than(lgmobile) {
+            width: calc(122px + 10%);
+        }
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+}

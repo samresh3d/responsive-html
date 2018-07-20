@@ -1,0 +1,157 @@
+_:-ms-fullscreen, :root footer .wrapper { width: 90%; } //IE11 Fix
+footer {
+    background-color: $near_black;
+    padding: 20px 0;
+    color: $white;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .wrapper {
+        padding: 0 70px 0 15px;
+        position: relative;
+        max-width: 1400px;
+        margin: 0 auto;
+        display: block;
+
+        a.logo svg {
+            display: inline-block;
+            margin-bottom: 25px;
+            width: 44px;
+            height: 26px;
+
+            @include larger-than(tablet) {
+                margin-bottom: auto;
+            }
+        }
+
+        ul {
+            &.footer_menu {
+                margin: 0;
+                padding: 0;
+
+                @include larger-than(tablet) {
+                    position: absolute;
+                    top: 9px;
+                    right: 170px;
+                }
+
+
+                li {
+
+                    padding-bottom: 15px;
+                    @extend .font_bold;
+                    font-size: 15px;
+                    line-height: 24px;
+                    display: block;
+
+                    @include larger-than(tablet) {
+                        display: inline;
+                        padding-right: 10px;
+                    }
+                    @include larger-than(desktop) {
+                        padding-right: 18px;
+                    }
+
+
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                }
+            }
+            &.social {
+                position: absolute;
+                right: 25px;
+                top: -9px;
+                list-style: none;
+
+                @include larger-than(tablet) {
+                    right: 45px;
+                }
+
+                li {
+                    margin-right: 15px;
+                    display: inline-flex;
+                }
+                .fb {
+                    height: 12px;
+                    width: 12px;
+                    @include larger-than(tablet) {
+                        padding-right: 5px;
+                    }
+                }
+
+                .tw {
+                    height: 12px;
+                    width: 14px;
+                    @include larger-than(tablet) {
+                        padding-right: 10px;
+                    }
+                }
+
+                .yt {
+                    height: 14px;
+                    width: 16px;
+                    margin-right: 25px;
+                }
+            }
+        } // END UL
+        .content {
+            padding-top: 20px;
+
+            p {
+                margin: 1em 0;
+                padding: 0;
+                @extend .font_light;
+                font-size: 12px;
+                line-height: 16px;
+                color: $white;
+
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .bottom_section {
+            padding-top: 20px;
+            position: relative;
+            small {
+                color: $white;
+                font-size: 11px;
+                padding: 15px 0;
+                @extend .font_bold;
+                display: inline-block;
+            }
+            ul {
+                position: absolute;
+                right: -20px;
+                top: 17px;
+                margin: 0;
+                padding: 0;
+
+                @include larger-than(desktop) {
+                    right: -10px;
+                }
+
+                li {
+                    position: static;
+                    display: inline-block;
+                    padding: 0;
+                    &.fdic {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

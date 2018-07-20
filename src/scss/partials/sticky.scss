@@ -1,0 +1,69 @@
+
+.sticky-bar {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    align-content: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 75px;
+    max-height: 0;
+    background-color: $white;
+    color: $black;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.1s, opacity 0.2s;
+    box-shadow: 0 3px 3px 0 rgba(173, 171, 173, .7);
+    font-size: 14px;
+
+    .left-content {
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+        margin-right: 8px;
+        margin-left: 8px;
+        margin-top: 5px;
+        a {
+            width: 175px;
+            height: 40px;
+            line-height: 40px;
+            &:after {
+                margin: 0 15px 0 -15px;
+            }
+
+            &.link {
+                background-color: transparent;
+                display: block;
+                color: $citi_blue;
+                font-size: 11px;
+                width: auto;
+                height: auto;
+                line-height: 24px;
+                @extend .font_regular;
+                text-decoration: underline;
+
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+.sticky-visible {
+    visibility: visible;
+    max-height: 75px;
+    opacity: 1;
+}
+

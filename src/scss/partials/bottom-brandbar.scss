@@ -1,0 +1,71 @@
+.bottom-brandbar {
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+
+    @include larger-than(tablet) {
+        height: 110px;
+    }
+    
+    .dk-blue {
+        background-color: $dark_blue;
+        width: 10px;        
+        height: 10px;  
+        float: right; 
+        clear: both; 
+    }
+    .lt-blue {
+        background-color: #87c4ee;
+        width: calc(100% - 10px);
+        height: 10px;
+        display: block;   
+        float: right; 
+        overflow: hidden;
+    }
+    .citi-blue {
+        background-color: $citi-blue;
+        width: 110px;        
+        height: 80px;
+        float: right; 
+        
+        @include larger-than(tablet) {
+            height: 100px;
+            width: 142px;
+        }
+        
+    }
+    .blue {
+        background-color: #008FC9;
+        width: 67px;
+        height: 45px;
+        float: right; 
+        margin-top: 35px;
+
+        @include larger-than(lgmobile) {
+            width: calc(65px + 10%);
+        }
+        @include larger-than(tablet) {
+            margin-top: 55px;
+        }
+    }
+    .med-blue {
+        background-color: #6db0e0;
+        width: 122px;
+        height: 15px;
+        float: right;
+        margin-top: 65px; 
+
+        @include larger-than(lgmobile) {
+            width: calc(122px + 10%);
+        }
+        @include larger-than(tablet) {
+            margin-top: 85px;
+        }
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+}

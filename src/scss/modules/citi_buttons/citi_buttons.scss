@@ -1,0 +1,115 @@
+@import "../../custom/variables";
+@import "../../custom/mixins";
+@import "../../custom/fonts";
+
+//Citi Button
+.citi-btn {
+	border: 0;
+	outline: none;
+    width: 220px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    @extend .font_bold;
+    font-size: 16px;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 6px;
+    text-decoration: none;
+    &:after {
+    	content: "›";
+        float: right;
+        width: 0;
+        margin: -1px 20px 0 -20px;
+        font-size: 110%;
+    }	
+    &:focus:not(.touch-device) {
+        outline: 1px solid;
+        outline-offset: -6px;
+    }
+    //CITIBANK BUTTON
+    &.btn-ltblue {
+        color: $white;
+        background-color: $citi_blue;
+        &:focus:not(.touch-device),
+        &:hover:not(.touch-device) {
+            background-color: $dark_blue;
+        }
+    }
+    //CITI PRIORITY BUTTON
+    &.btn-dkblue {
+        color: $white;
+        background-color: $dark_blue;
+        &:focus:not(.touch-device),
+        &:hover:not(.touch-device) {
+            background-color: $citi_blue;
+        }
+    }
+    //CITIGOLD BUTTON
+    &.btn-gold {
+        color: $white;       
+        background-color: $citi_gold1;
+        &:focus:not(.touch-device),
+        &:hover:not(.touch-device) {
+            background-color: $citi_gold3;
+	    }
+    }
+
+    //WHITE CITIBANK BUTTON
+    &.btn-ltwhite {
+		color: $citi_blue;	
+		background-color: $white;
+        &:focus:not(.touch-device),
+        &:hover:not(.touch-device) {
+            color: $white;
+            background-color: $dark_blue;
+	    }
+    }
+    //WHITE CITI PRIORITY BUTTON
+    &.btn-dkwhite {
+        color: $dark_blue;        
+        background-color: $white;
+        &:focus:not(.touch-device),
+        &:hover:not(.touch-device) {
+            color: $white;
+            background-color: $citi_blue;
+	    }
+    }
+    //WHITE CITIGOLD BUTTON
+    &.btn-goldwhite {
+        color: $citi_gold1;        
+        background-color: $white;
+        &:focus:not(.touch-device),
+        &:hover:not(.touch-device) {
+            color: $white;
+            background-color: $citi_gold3;
+	    }
+    }
+}
+
+
+//NO NEED TO COPY
+//Other styling to help the display
+body.citi-btn-module {
+
+    .container-to-show {
+        text-align: center;
+        padding: 14px 0 30px;
+        width: 320px;
+        background-color: $white;
+        border-top: 1px solid;
+        &.lt-blue {
+            background-color: $citi_blue;
+            color: $white;
+        }
+        &.dk-blue {
+            background-color: $dark_blue;
+            color: $white;
+        }
+        &.gold {
+            background-color: $citi_gold1;
+            color: $white;
+        }
+    }
+}
