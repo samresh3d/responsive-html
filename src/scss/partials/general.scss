@@ -132,3 +132,264 @@ hr {
 }
 
 
+/*SAMRESH CSS OLD*/
+
+.greay{background-color: #eeeeee;}
+.blue{background-color: $dark_blue;}
+.white{background-color: #ffffff;}
+
+.icon{
+    display: inline-block;
+    width: 66px;
+    height: 80px;
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position: center;
+    margin-bottom: 20px;
+    
+    
+    @include larger-than(tablet) { width: 46px; height: 45px;}  
+    @include larger-than(desktop){ width: 66px; height: 80px; margin-bottom: 45px;}
+
+    
+}
+.wraper{
+    
+        text-align: center;
+        .headingAndRate{
+        
+        padding: 90px 20px 20px;
+        @include smaller-than(lgmobile) {padding: 90px 9px 20px;}
+        @include larger-than(tablet) {padding: 110px 9px 20px;}
+        @include larger-than(desktop) {padding: 90px 9px 36px;}
+            
+        .headingArea{
+            padding: 30px 10px 10px;
+            color: $dark_blue;
+            @include smaller-than(lgmobile) {padding: 20px 0px 10px;}
+            @include larger-than(tablet) {padding: 20px 0px 22px;}
+            @include larger-than(desktop) {padding: 0px 9px 22px;}
+            
+            h1{
+            font-family: 'interstate-light';
+            text-transform: uppercase;
+            font-size: 40px;
+            line-height: 45px;
+                
+            @include smaller-than(lgmobile) {font-size: 30px;line-height: 34px;}
+            @include larger-than(tablet) {font-size: 30px;line-height: 38px;}
+            @include larger-than(desktop) {font-size: 45px; line-height: 45px;}
+                
+                .heading2ndLine{
+                    font-family: 'interstate-light';
+                    display: block;
+                    color: #46b7e6;
+                    @include larger-than(tablet) {display: inline;}
+                }   
+            }
+            .discription{
+                font-family: 'interstateregular';
+                font-size: 20px;
+                line-height: 16px;
+                @include smaller-than(lgmobile) {font-size: 15px;}
+                @include larger-than(tablet) {font-size: 16px; line-height: 18px;}
+            }
+        }
+        .infoListWraper{
+            width:100%;
+            max-width: 768px;
+            margin: 0px auto;
+            @include larger-than(desktop) {max-width: 1000px;}
+            
+        .info{
+            
+            font-family: 'interstate-light';
+            font-size: 18px;
+            color: $dark_blue;
+            @include larger-than(tablet) {width: 48%; float: left; font-size: 10px; padding: 20px; box-sizing: border-box; border-right: 1px solid #46c6e5;}
+            
+            .bigNo{
+                padding: 20px ;
+                font-size: 110px;
+                line-height: 95px;
+                @include larger-than(tablet) {padding: 0px ;}
+                @include larger-than(desktop) {font-size: 171px; line-height: 171px;}
+                sup{
+                    font-size: 95px;
+                    top:-.125em;
+                    @include smaller-than(lgmobile) {font-size: 80px; top:-.24em;}
+                    @include larger-than(tablet) {font-size: 45px; top:-1em;}
+                    @include larger-than(desktop) {font-size: 75px; top: -1em;}
+                } 
+            }
+            
+            .rateDetails{
+                
+                 @include larger-than(tablet) {text-align: left; width: 75%; margin: 0 auto;}
+                .text1{
+                    text-transform: uppercase;
+                    font-size: 16px;
+                    line-height: 18px;
+                    color: $light_blue;
+                    margin-bottom: 10px;
+                    @include larger-than(tablet) {margin-bottom: 0px;}
+                    @include larger-than(desktop) {font-size: 24px;}
+                }
+                
+                .text2{
+                    margin-bottom: 25px;
+                    @include larger-than(tablet) {margin-bottom: 0px;}
+                    @include larger-than(tablet) {font-size: 15px;}
+                    
+                }
+                
+            }
+        }
+        
+        .listHolder{
+            
+            @include larger-than(tablet) {width: 50%; display: inline-block; box-sizing: border-box; padding: 35px 10px;} 
+            @include larger-than(desktop) { padding: 40px 10px;}
+            
+            ul{
+                list-style: none;
+                padding: 0px;
+                margin: 0px auto;
+                width: 90%;
+                max-width: 265px;
+                text-transform: uppercase;
+                font-family: "interstateregular";
+                color:$dark_blue;
+                text-align: left;
+                @include larger-than(desktop) { max-width: 400px;}
+                    li{
+                        margin-bottom: 15px;
+                        @include larger-than(tablet) {margin-bottom: 25px;}
+                        @include larger-than(desktop){font-size:25px; margin-bottom: 40px;}
+                        
+                        &::before{
+                            content: "";
+                            display: inline-block;
+                            margin: 0px 30px 0px 0px;
+                            width: 34px;
+                            height: 34px;
+                            background: rgba(0,0,0,0) url("../images/list-mark.png") no-repeat center center;
+                            background-size: cover;
+                            vertical-align: middle;
+                            @include larger-than(tablet){width: 24px; height: 24px;}
+                            @include larger-than(desktop){width: 37px;height: 37px;}
+                        }
+                        
+                        &.lastChild{
+                            @include larger-than(tablet) {margin-bottom: 0px;}
+                        }
+                    }
+                }
+            }
+        } 
+    }
+        .ctaArea{
+            
+        background-color: $dark_blue;
+        color: #fff;
+        padding: 30px 100px;
+        @include smaller-than(lgmobile) {padding: 20px;} 
+        @include larger-than(tablet) {padding: 20px 100px; margin-bottom: 30px;}
+        @include larger-than(desktop) {padding: 20px 100px 40px; margin-bottom: 55px;}
+            
+        .heading{
+            font-family: 'interstate-light';
+            font-size: 28px;
+            line-height: 28px;
+            margin-bottom: 25px;
+            @include smaller-than(lgmobile) {font-size: 22px;line-height: 22px;margin-bottom: 15px;}
+            @include larger-than(lgmobile) {font-size: 17px;line-height: 18px;margin-bottom: 15px;}
+            @include larger-than(desktop) {font-size: 32px;line-height: 32px;margin-bottom: 25px;}
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            font-family: "interstateregular";
+            padding: 10px 20px 10px 30px;
+            color: $white;
+            font-size:14px;
+            background-color: #25a6da;
+            border-radius: 5px;
+            @include larger-than(lgmobile) {font-size: 20px;}
+            
+            &::after{
+                content: ">";
+                padding: 0px 0px 0px 30px
+            }
+        }
+    }
+        .benifitsArea {
+            padding: 55px 40px 20px;
+            font-size: 16px;
+            color: $dark_blue;
+            @include smaller-than(lgmobile) {padding: 35px 20px; font-size: 14px;}
+            @include larger-than(tablet) {padding: 0px; font-size: 11px;} 
+            @include larger-than(desktop) {font-size: 16px;}
+            .heading{ 
+                    font-family: 'interstate-light'; 
+                    font-size: 36px; 
+                    line-height: 32px; 
+                    color: #002d72;
+                    @include smaller-than(lgmobile) {font-size: 25px; line-height: 25px; }
+                    @include larger-than(tablet) {font-size: 28px; line-height: 28px;  margin-bottom: 30px;}
+                    @include larger-than(desktop) {font-size: 42px; line-height: 42px;  margin-bottom: 60px;}
+                }
+            .thumbarea{
+                width: 100%;
+                max-width: 1000px;
+                margin: 0px auto;
+                .imageAndContent{
+
+                        width: 80%;
+                        min-width: 320px;
+                        margin: 0 auto;
+                        padding: 20px;
+                        @include smaller-than(lgmobile) {width: 100%; min-width: 280px; padding: 20px 0px; }
+                        @include larger-than(tablet) {width: 33%;max-width: 320px;  min-width: 250px; float: left; box-sizing: border-box;padding: 0px 30px; }  
+                        @include larger-than(desktop) {max-width: 360px; padding: 0px 0px; }
+
+                        .iconHeading{
+                            font-size: 21px;
+                            color: #46b7e6;
+                            font-weight: bold;
+                            margin: 0px 0px 20px;
+                            
+                            @include smaller-than(lgmobile) {font-size: 18px; line-height: 20px; padding: 10px 0px; }
+                            @include larger-than(tablet) {font-size: 14px; line-height: 14px; margin: 0px auto 10px;
+                                span{display:block;}
+                            }
+                            @include larger-than(desktop) {font-size: 21px; line-height: 24px; margin: 0px auto 20px;}
+                            
+                        }
+                        .iconDisc{
+                            padding: 0px 20px;
+                            @include larger-than(tablet) {padding: 0px 0px;  margin-bottom: 30px;} 
+                            @include larger-than(desktop) {margin-bottom: 80px;}
+                        }
+
+                        .savingRate{
+                                background-image: url("../images/icon_1.png");
+                            }
+                        .deserve{
+                            background-image: url("../images/icon_2.png");
+                        }
+                        .network{
+                            background-image: url("../images/icon_3.png");
+                        }
+                    }
+            }
+        
+    }
+    
+
+}
+
+    footer,.bottom-brandbar{
+        clear: both;
+        .arrow{display: inline-block;transform: rotate(270deg);}
+    }

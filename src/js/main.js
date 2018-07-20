@@ -58,7 +58,7 @@ window.onscroll = () => {
 }
 //end of on scroll event
 
-
+/*
 // Importing Articles json var
 import { articles } from "./data/data";
 var allArticles = "";
@@ -73,7 +73,7 @@ var allArticles = "";
 		}
 	}
 // adding articles to html section
- document.querySelector(".articles").innerHTML = allArticles;
+ document.querySelector(".articles").innerHTML = allArticles;*/
 
 
 
