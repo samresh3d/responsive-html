@@ -158,10 +158,10 @@ hr {
         text-align: center;
         .headingAndRate{
         
-        padding: 90px 20px 20px;
-        @include smaller-than(lgmobile) {padding: 90px 9px 20px;}
-        @include larger-than(tablet) {padding: 110px 9px 20px;}
-        @include larger-than(desktop) {padding: 90px 9px 36px;}
+        padding: 20px 20px 20px;
+        @include smaller-than(lgmobile) {padding: 10px 9px 20px;}
+        @include larger-than(tablet) {padding: 10px 9px 20px;}
+        @include larger-than(desktop) {padding: 20px 9px 36px;}
             
         .headingArea{
             padding: 30px 10px 10px;
@@ -175,6 +175,7 @@ hr {
             text-transform: uppercase;
             font-size: 40px;
             line-height: 45px;
+            margin: 0;
                 
             @include smaller-than(lgmobile) {font-size: 30px;line-height: 34px;}
             @include larger-than(tablet) {font-size: 30px;line-height: 38px;}
@@ -248,8 +249,8 @@ hr {
         
         .listHolder{
             
-            @include larger-than(tablet) {width: 50%; display: inline-block; box-sizing: border-box; padding: 35px 10px;} 
-            @include larger-than(desktop) { padding: 40px 10px;}
+            @include larger-than(tablet) {width: 50%; display: inline-block; box-sizing: border-box; padding: 35px 10px;min-height: 218px;} 
+            @include larger-than(desktop) { padding: 40px 10px;min-height: 308px;}
             
             ul{
                 list-style: none;
@@ -351,7 +352,7 @@ hr {
                         padding: 20px;
                         @include smaller-than(lgmobile) {width: 100%; min-width: 280px; padding: 20px 0px; }
                         @include larger-than(tablet) {width: 33%;max-width: 320px;  min-width: 250px; float: left; box-sizing: border-box;padding: 0px 30px; }  
-                        @include larger-than(desktop) {max-width: 360px; padding: 0px 0px; }
+                        @include larger-than(desktop) {width: 30%; margin-right: 3%; padding: 0px 0px; }
 
                         .iconHeading{
                             font-size: 21px;

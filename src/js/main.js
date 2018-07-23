@@ -24,14 +24,14 @@ window.onscroll = () => {
 //sticky nav end
 // Lazy load if section doesn't exist
 	let backToTop = document.querySelector(".back-to-top");
-	if (!backToTop){
-		 require(['../partials/footer.hbs'], template => {
-			        document.getElementById("extra").innerHTML = template();	
-			        import('./modules/modal_speedbump').then((dialog)=>{
-					       dialog.dialogInit();
-					});			 				
-		});
-	}
+//	if (!backToTop){
+//		 require(['../partials/footer.hbs'], template => {
+//			        document.getElementById("extra").innerHTML = template();	
+//			        import('./modules/modal_speedbump').then((dialog)=>{
+//					       dialog.dialogInit();
+//					});			 				
+//		});
+//	}
 	//back to top
 	if(backToTop){            
 	        if(window.pageYOffset > document.querySelector("footer").offsetTop - window.innerHeight + 75){
@@ -85,4 +85,35 @@ let getOffsetTop = elem => {
     return offsetTop;
 }
 //end sticky nav function getOffsetTop 
+
+
+
+    
+
+window.onload = function(){
+    
+    /*Toggle Display Information*/
+let isShowing = true;
+let button = document.getElementById("toggleButton");
+let disc = document.getElementById("discription");
+    button.addEventListener("click", toggleDisclaimer);
+
+
+function toggleDisclaimer(){
+    
+    console.log("isShowing: "+isShowing);
+    if(isShowing){
+        disc.style.display="none";
+        isShowing = false;
+    }
+    else{
+        disc.style.display="block";
+        isShowing = true;
+    }   
+}
+}
+
+
+
+
 
